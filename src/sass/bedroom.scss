@@ -17,10 +17,70 @@
       border-right: 80px solid transparent;
     }
 
+    .buyNow {
+      position: absolute;
+      width: 222px;
+      background-color: #ff638f;
+      bottom: 4px;
+      height: 268px;
+      font-size: 41px;
+      color: #65bd8c;
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 40px;
+      box-sizing: border-box;
+      animation-name:animBuy;
+      animation-duration: 1.5s;
+      animation-play-state: paused;
+
+      .crossBuy {
+        display: none;
+
+        hr {
+          border: 1px solid white;
+          width: 10px;
+          transform: rotate(45deg);
+          position: absolute;
+          top: -10px;
+          left: 203px;
+          cursor: pointer;
+
+          &:last-child {
+            transform:rotate(135deg);
+          }
+        }
+      }
+    }
+
+    @keyframes animBuy {
+      from {
+        width:0px;
+        font-size: 0px;
+      }
+
+      to {
+        width:222px;
+        font-size: 41px;
+      }
+    }
+
+    @keyframes reversAnimBuy {
+      from {
+        width:222px;
+        font-size: 41px;
+      }
+
+      to {
+        width:0px;
+        font-size: 0px;
+      }
+    }
+
     .whiteStar {
       position: absolute;
       left: 15px;
       bottom: 235px;
+      cursor: pointer;
     }
   }
 
